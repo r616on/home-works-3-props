@@ -12,7 +12,7 @@ function Typing({ from, item }) {
       </div>
       {text && (
         <div className="message other-message float-right">
-          {text ? text : false}
+          {text ? text : null}
         </div>
       )}
     </li>

@@ -11,7 +11,7 @@ function Message({ from, item }) {
         <i className="fa fa-circle me"></i>
       </div>
       <div className="message other-message float-right">
-        {text ? text : false}
+        {text ? text : null}
       </div>
     </li>
   );

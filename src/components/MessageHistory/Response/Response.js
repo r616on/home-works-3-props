@@ -11,7 +11,7 @@ function Response({ from, item }) {
         </span>
         <span className="message-data-time">{time}</span>
       </div>
-      <div className="message my-message">{text ? text : false}</div>
+      <div className="message my-message">{text ? text : null}</div>
     </li>
   );
 }

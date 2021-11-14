@@ -16,7 +16,7 @@ function MessageHistory({ list }) {
         } else if (type === "typing") {
           return <Typing key={id} from={from} item={item} />;
         } else {
-          return false;
+          return null;
         }
       })}
     </ul>

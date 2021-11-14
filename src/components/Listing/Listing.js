@@ -54,8 +54,8 @@ function Listing({ items }) {
             <div className="item-image">
               <a href={url}>
                 <img
-                  src={MainImage ? MainImage.url_570xN : ""}
-                  alt={titleFun(title) ? titleFun(title) : ""}
+                  src={MainImage ? MainImage.url_570xN : null}
+                  alt={titleFun(title) ? titleFun(title) : null}
                 />
               </a>
             </div>
