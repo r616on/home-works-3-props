@@ -5,21 +5,29 @@ import Response from "./Response/Response";
 import Typing from "./Typing/Typing";
 
 function MessageHistory({ list }) {
+  let listArr = [];
+  if (list.length > 0) {
+    listArr = list;
+  } else {
+    listArr = null;
+  }
   return (
-    <ul>
-      {list.map((item) => {
-        const { from, id, type } = item;
-        if (type === "message") {
-          return <Message key={id} from={from} item={item} />;
-        } else if (type === "response") {
-          return <Response key={id} from={from} item={item} />;
-        } else if (type === "typing") {
-          return <Typing key={id} from={from} item={item} />;
-        } else {
-          return null;
-        }
-      })}
-    </ul>
+    listArr && (
+      <ul>
+        {listArr.map((item) => {
+          const { from, id, type } = item;
+          if (type === "message") {
+            return <Message key={id} from={from} item={item} />;
+          } else if (type === "response") {
+            return <Response key={id} from={from} item={item} />;
+          } else if (type === "typing") {
+            return <Typing key={id} from={from} item={item} />;
+          } else {
+            return null;
+          }
+        })}
+      </ul>
+    )
   );
 }
 

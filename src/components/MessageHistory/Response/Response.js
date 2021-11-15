@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Response({ from, item }) {
   const { time, text } = item;
@@ -16,4 +17,15 @@ function Response({ from, item }) {
   );
 }
 
+Response.propTypes = {
+  from: PropTypes.object,
+  item: PropTypes.object,
+};
+Response.defaultProps = {
+  from: { name: "Виктор" },
+  item: {
+    time: "10",
+    text: "Нет",
+  },
+};
 export default Response;

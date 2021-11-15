@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Typing({ from, item }) {
   const { time, text } = item;
@@ -19,4 +20,15 @@ function Typing({ from, item }) {
   );
 }
 
+Typing.propTypes = {
+  from: PropTypes.object,
+  item: PropTypes.object,
+};
+Typing.defaultProps = {
+  from: { name: "Виктор" },
+  item: {
+    time: "10",
+    text: "Нет",
+  },
+};
 export default Typing;

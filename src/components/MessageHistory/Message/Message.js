@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Message({ from, item }) {
   const { time, text } = item;
@@ -16,5 +17,17 @@ function Message({ from, item }) {
     </li>
   );
 }
+
+Message.propTypes = {
+  from: PropTypes.object,
+  item: PropTypes.object,
+};
+Message.defaultProps = {
+  from: { name: "Виктор" },
+  item: {
+    time: "10",
+    text: "Нет",
+  },
+};
 
 export default Message;
